@@ -1,0 +1,15 @@
+---------- Date: 2017-12-09 11:46:56 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /vily/
+MOD DETAILS:
+   modFile   : C:\OSPanel\domains\localhost\vily\vqmod/xml/vqmod_show_products_all.xml
+   id        : Show_products_all route
+   version   : 1
+   vqmver    : 2.2.2
+   author    : AlexWaha
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <div class="links">
+
+----------------------------------------------------------------------
+
+

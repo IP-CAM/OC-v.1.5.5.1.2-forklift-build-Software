@@ -1,0 +1,36 @@
+<modification>
+	<id>Show_products_all route</id>
+	<version>1</version>
+	<vqmver>2.2.2</vqmver>
+	<author>AlexWaha</author>
+	<email>waha050@gmail.com</email>
+		<file name="catalog/controller/common/header.php">
+			<operation>
+				<search position="before"><![CDATA[$this->data['text_home'] = $this->language->get('text_home');]]></search>
+				<add><![CDATA[$this->data['text_all_prod'] = $this->language->get('text_all_prod');]]></add>
+			</operation>
+				<operation>
+				<search position="before"><![CDATA[$this->data['home'] = $this->url->link('common/home');]]></search>
+				<add><![CDATA[$this->data['all_prod'] = $this->url->link('product/showproductall');]]></add>
+			</operation>
+		</file>
+		<file name="catalog/language/english/common/header.php">
+			<operation>
+				<search position="before"><![CDATA[>?]]></search>
+				<add><![CDATA[$_['text_all_prod']       = 'Show all product';]]></add>
+			</operation>
+		</file>
+		<file name="catalog/language/russian/common/header.php">
+			<operation>
+				<search position="before"><![CDATA[?>]]></search>
+				<add><![CDATA[$_['text_all_prod']       = 'Показать все товары';]]></add>
+			</operation>
+		</file>	
+		<file name="catalog/view/theme/*/template/common/header.tpl">
+			<operation>
+				<search position="replace"><![CDATA[<div class="links">]]></search>
+				<add><![CDATA[<div class="links"><a href="<?php echo $all_prod; ?>"><?php echo $text_all_prod; ?></a>]]></add>
+			</operation>
+		</file>
+</modification>
+
