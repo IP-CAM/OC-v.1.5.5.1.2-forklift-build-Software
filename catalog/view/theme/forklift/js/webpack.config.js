@@ -1,7 +1,7 @@
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require("webpack");
 
 module.exports = {
-    //devtool: 'eval',
     //devtool: "source-map",
     entry: {
         app: "./components/App.js"
@@ -24,23 +24,17 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            /*{
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style!css'
-                    }
-                ]
-            }*/
+            }
         ]
     },
-    watch: true,
-    // externals: {
-    //     jQuery: 'jquery'
-    // },
+
+    //watch: true,
     plugins: [
-        new UglifyJSPlugin()
+        new UglifyJSPlugin(),
+        new webpack.ProvidePlugin({
+            $: "./jquery/jquery.js",
+            jQuery: "./jquery/jquery.js"
+        })
     ]
 };
 

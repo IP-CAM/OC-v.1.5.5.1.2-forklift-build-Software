@@ -31,9 +31,9 @@
 								<b><?php echo $product['attribute_groups'][0]['attribute'][1]['text']; ?></b>
 							</div>
 							<?php } ?>
-							<div class="link"><span>Подробнее</span></div>
 						</div>
 
+						<div class="product__link"><span>Подробнее</span></div>
 
 
 				 </a>

@@ -29,9 +29,11 @@
           media="<?php echo $style['media']; ?>"/>
     <?php } ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="catalog/view/theme/forklift/js/components/jquery/jquery.js"></script>
     <?php echo $google_analytics; ?>
 
     <script>
+        window.urlShowAllModels = "";
         window.utils = {};
         window.utils.logo = "<?php echo $logo; ?>";
         window.utils.address = "<?php echo $this->config->get('config_address'); ?>";
@@ -79,33 +81,21 @@
                     <?php } ?>
 
                     <div class="header-top__info">
-                        <div class="header-top__phone">
-                            <div class="feedback">Позвонить нам</div>
-                            <div class="header-top__info-contacts">
+                        <div class="header-top__info-feedback">
+                            <a href="tel:<?php echo $this->config->get('config_telephone'); ?>" class="feedback">Позвонить нам</a>
+                            <span class="feedback js-feedback-btn"">Оставить заявку</span>
+                        </div>
+                        <div class="header-top__info-contacts">
+                            <div class="header-top__info-contacts-mail">
+                                <span><?php echo $this->config->get('config_address'); ?></span><br/>
+                                <span><?php echo $this->config->get('config_email'); ?></span>
+                            </div>
+                            <div class="header-top__info-contacts-phone">
                                 <span><?php echo $this->config->get('config_telephone'); ?></span><br>
                                 <span><?php echo $this->config->get('config_fax'); ?></span>
                             </div>
                         </div>
-                        <div class="header-top__feedback">
-                            <a class="feedback" href="#popup-form">Оставить заявку</a>
-                            <div class="header-top__info-contacts">
-                                <span><?php echo $this->config->get('config_email'); ?></span><br>
-                                <span><?php echo $this->config->get('config_address'); ?></span>
-                            </div>
-                        </div>
-                        <!--<div class="header-top__address">
-                            <address><?php echo $this->config->get('config_address'); ?></address>
-                            <div class="header-top__address_phone"><?php echo $this->config->get('config_telephone'); ?></div>
-                            <div class="header-top__address_phone"><?php echo $this->config->get('config_fax'); ?></div>
-                            <div class="header-top__address_email"><a
-                                    href="mailto:<?php echo $this->config->get('config_email'); ?>"><?php echo $this->
-                                config->get('config_email'); ?></a></div>
-                        </div>-->
                     </div>
-                    <!--<div id="search">
-                        <div class="button-search"></div>
-                        <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
-                    </div>-->
 
 
                 </section>
@@ -113,10 +103,10 @@
 
             <div class="top-menu">
                 <div class="container">
-                    <a class="top-menu__link gradient-border" href="<?php echo $home; ?>"><span><?php echo $text_home; ?></span></a>
-                    <a class="top-menu__link gradient-border" href="index.php?route=product/showproductall"><span>Каталог</span></a>
+                    <a class="top-menu__link" href="<?php echo $home; ?>"><span><?php echo $text_home; ?></span></a>
+                    <a class="top-menu__link" href="index.php?route=product/showproductall"><span>Каталог</span></a>
                     <?php foreach ($informations as $information) { ?>
-                        <a class="top-menu__link gradient-border" href="<?php echo $information['href']; ?>"><span><?php echo $information['title']; ?></span></a>
+                        <a class="top-menu__link" href="<?php echo $information['href']; ?>"><span><?php echo $information['title']; ?></span></a>
                     <?php } ?>
                 </div>
             </div>

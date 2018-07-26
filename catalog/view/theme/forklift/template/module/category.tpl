@@ -11,7 +11,7 @@
         <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
         <?php } ?>
         <?php if ($category['children']) { ?>
-        <i class="category-box__arrow-right" title="Развернуть"></i>
+        <i class="category-box__icon plus" title="Развернуть"></i>
         <ul class="category-box__sub-menu">
           <?php foreach ($category['children'] as $child) { ?>
           <li class="category-box__sub-item">
@@ -26,6 +26,9 @@
         <?php } ?>
       </li>
       <?php } ?>
+      <li class="category-box__item">
+        <a href="/index.php?route=information/information&information_id=8">Запчасти</a>
+      </li>
     </ul>
   </div>
 </div>

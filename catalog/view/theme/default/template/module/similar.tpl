@@ -50,10 +50,10 @@
 
                 <?php } ?>
 
-                <div class="link"><span>Подробнее</span></div>
 
             </div>
 
+            <div class="product__link"><span>Подробнее</span></div>
 
 
             <!--<div class="attrs_elem">

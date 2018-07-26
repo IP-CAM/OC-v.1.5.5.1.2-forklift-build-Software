@@ -63,7 +63,7 @@ class ControllerModulecategoryhome extends Controller {
 					} else {
 						$image = 'no_image.png';
 					}
-			$categoryhome[$i]['thumb'] = $this->model_tool_image->resize($image, 200, 200);
+			$categoryhome[$i]['thumb'] = $this->model_tool_image->resize($image, 351, 234);
 			$categoryhome[$i]['name'] = $result['name'];
 			$categoryhome[$i]['seo_h1'] = $result['seo_h1'];
 

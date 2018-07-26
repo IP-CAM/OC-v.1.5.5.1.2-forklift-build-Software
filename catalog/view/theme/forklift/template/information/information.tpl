@@ -5,7 +5,9 @@
 
 
 
-<section class="main-wrap container">
+<section class="main-wrap">
+  <div class="wrapper container">
+
   <?php echo $column_left; ?>
 
   <div class="breadcrumb">
@@ -25,6 +27,7 @@
   <!-- /Content -->
 
 <?php echo $column_right; ?>
+  </div>
 </section>
 
 

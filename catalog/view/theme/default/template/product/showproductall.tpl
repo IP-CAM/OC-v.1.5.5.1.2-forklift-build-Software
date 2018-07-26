@@ -2,6 +2,10 @@
 
 <section class="content-top">
   <?php echo $content_top; ?>
+  <div class="parts">
+    <a class="parts-link" href="/index.php?route=information/information&information_id=8" title="Запчасти для техники TCM">
+    </a>
+  </div>
 </section>
 
 <section class="main-wrap container">
@@ -81,9 +85,9 @@
 
                 <?php } ?>
 
-                <div class="link"><span>Подробнее</span></div>
 
               </div>
+              <div class="product__link"><span>Подробнее</span></div>
 
 
 
